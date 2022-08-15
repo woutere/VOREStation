@@ -221,10 +221,10 @@ GLOBAL_DATUM_INIT(mhelp_tickets, /datum/mentor_help_tickets, new)
 	if(initiator)
 		initiator.current_mentorhelp = src
 
-	AddInteraction("<font color='purple'>Reopened by [usr.ckey]</font>")
+	AddInteraction("<font color='purple'>Reopened by [usr]</font>")
 	if(initiator)
-		to_chat(initiator, "<span class='filter_adminlog'><font color='purple'>Ticket [TicketHref("#[id]")] was reopened by [usr.ckey].</font></span>")
-	var/msg = "<span class='adminhelp'>Ticket [TicketHref("#[id]")] reopened by [usr.ckey].</span>"
+		to_chat(initiator, "<span class='filter_adminlog'><font color='purple'>Ticket [TicketHref("#[id]")] was reopened by [usr].</font></span>")
+	var/msg = "<span class='adminhelp'>Ticket [TicketHref("#[id]")] reopened by [usr].</span>"
 	message_mentors(msg)
 	log_admin(msg)
 	feedback_inc("mhelp_reopen")
@@ -248,12 +248,12 @@ GLOBAL_DATUM_INIT(mhelp_tickets, /datum/mentor_help_tickets, new)
 	state = AHELP_RESOLVED
 	GLOB.mhelp_tickets.ListInsert(src)
 
-	AddInteraction("<span class='filter_adminlog'><font color='green'>Resolved by [usr.ckey].</font></span>")
+	AddInteraction("<span class='filter_adminlog'><font color='green'>Resolved by [usr].</font></span>")
 	if(initiator)
-		to_chat(initiator, "<span class='filter_adminlog'><font color='green'>Ticket [TicketHref("#[id]")] was marked resolved by [usr.ckey].</font></span>")
+		to_chat(initiator, "<span class='filter_adminlog'><font color='green'>Ticket [TicketHref("#[id]")] was marked resolved by [usr].</font></span>")
 	if(!silent)
 		feedback_inc("mhelp_resolve")
-		var/msg = "Ticket [TicketHref("#[id]")] resolved by [usr.ckey]"
+		var/msg = "Ticket [TicketHref("#[id]")] resolved by [usr]"
 		message_mentors(msg)
 		log_admin(msg)
 
@@ -364,7 +364,7 @@ GLOBAL_DATUM_INIT(mhelp_tickets, /datum/mentor_help_tickets, new)
 			else
 				to_chat(usr, "<span class='warning'>Ticket not found, creating new one...</span>")
 		else
-			current_mentorhelp.AddInteraction("[usr.ckey] opened a new ticket.")
+			current_mentorhelp.AddInteraction("[usr] opened a new ticket.")
 			current_mentorhelp.Resolve()
 
 	new /datum/mentor_help(msg, src, FALSE)
