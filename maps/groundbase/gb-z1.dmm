@@ -7471,6 +7471,9 @@
 	},
 /turf/simulated/floor,
 /area/maintenance/groundbase/substation/medcargo)
+"qT" = (
+/turf/simulated/gore,
+/area/groundbase/level1/sw)
 "qU" = (
 /obj/effect/floor_decal/industrial/danger{
 	dir = 1
@@ -29814,7 +29817,7 @@ aG
 WC
 bh
 AZ
-AZ
+qT
 Dt
 cq
 KE
@@ -29955,8 +29958,8 @@ XS
 GO
 nO
 lE
-AZ
-AZ
+qT
+qT
 Dt
 Dt
 Dt
@@ -30097,8 +30100,8 @@ KM
 FH
 PP
 lE
-AZ
-AZ
+qT
+qT
 Eb
 Eb
 Eb
@@ -30239,9 +30242,9 @@ XS
 kK
 nO
 lE
-AZ
-AZ
-AZ
+qT
+qT
+qT
 Eb
 Eb
 Eb
@@ -30381,7 +30384,7 @@ XS
 kK
 xJ
 lE
-AZ
+qT
 Eb
 Eb
 Eb
@@ -30523,7 +30526,7 @@ nR
 av
 tH
 lE
-AZ
+qT
 Eb
 Eb
 Eb
